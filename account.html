@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Miss Olympia Shkodër - parfume 99.9% origjinale që nga 2015. Parruce, pranë pasticerisë Oraldi. Dërgesa në të gjitha qytetet.">
+    <meta name="theme-color" content="#0d0c09">
+    <title>Llogaria | Miss Olympia</title>
+    <link rel="icon" type="image/png" href="images/brand/favicon.png">
+    <link rel="apple-touch-icon" href="images/brand/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+    <div class="announcement-bar">
+        <div class="container announcement-inner">
+            <span>99.9% origjinale</span>
+            <span class="announcement-sep" aria-hidden="true">&#9670;</span>
+            <span>Dërgesa në të gjitha qytetet</span>
+            <span class="announcement-sep" aria-hidden="true">&#9670;</span>
+            <span>Parruce, Shkodër</span>
+        </div>
+    </div>
+
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo" aria-label="Miss Olympia - kryefaqja">
+                <img src="images/brand/logo.png" alt="" class="logo-emblem" width="880" height="880">
+                <span class="logo-wordmark">MISS OLYMPIA</span>
+            </a>
+            <nav class="nav" id="nav" aria-label="Menuja kryesore">
+                <ul class="nav-list"><li><a href="index.html" class="nav-link">Kryefaqja</a></li><li><a href="shop.html" class="nav-link">Koleksioni</a></li><li><a href="about.html" class="nav-link">Rreth Nesh</a></li><li><a href="contact.html" class="nav-link">Kontakt</a></li></ul>
+            </nav>
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Kërko parfum..." id="searchInput" aria-label="Kërko produkte">
+                    <button class="search-btn" aria-label="Kërko"><i class="fas fa-search"></i></button>
+                </div>
+                <a href="wishlist.html" class="header-action-btn wishlist-btn" title="Të preferuarat">
+                    <i class="far fa-heart"></i>
+                    <span class="wishlist-count" id="wishlistCount">0</span>
+                </a>
+                <a href="cart.html" class="cart-icon" title="Shporta">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+                <div class="account-wrapper">
+                    <a href="account.html" class="header-action-btn account-btn active" id="accountBtn" title="Llogaria ime">
+                        <i class="far fa-user"></i>
+                    </a>
+                    <div class="account-dropdown">
+                        <a href="account.html">Hyr</a>
+                        <a href="account.html?action=register">Regjistrohu</a>
+                        <div class="divider"></div>
+                        <a href="wishlist.html">Të preferuarat</a>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Hap menynë" aria-expanded="false" aria-controls="nav">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="account-page-section">
+            <div class="container">
+                <div class="auth-container" id="loginContainer">
+                    <div class="auth-header">
+                        <img src="images/brand/logo.png" alt="" class="auth-emblem" aria-hidden="true">
+                        <h1>Hyr</h1>
+                        <p class="auth-lead">Mirë se u ktheve në Miss Olympia</p>
+                    </div>
+                    <form id="mainLoginForm">
+                        <div class="auth-form-group">
+                            <label for="username">Emri i përdoruesit ose email <span>*</span></label>
+                            <input type="text" id="username" class="auth-input" required>
+                        </div>
+                        <div class="auth-form-group">
+                            <label for="password">Fjalëkalimi <span>*</span></label>
+                            <input type="password" id="password" class="auth-input" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full auth-submit-btn">Hyr</button>
+                        <div class="auth-footer">
+                            <label class="remember-me"><input type="checkbox"> Më mbaj mend</label>
+                            <a href="#" class="lost-password">Harruat fjalëkalimin?</a>
+                        </div>
+                        <div class="auth-switch">
+                            <span>I ri te Miss Olympia?</span>
+                            <a href="#" class="auth-toggle" onclick="toggleAuth('register'); return false;">Krijo llogari</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="auth-container hidden" id="registerContainer">
+                    <div class="auth-header">
+                        <img src="images/brand/logo.png" alt="" class="auth-emblem" aria-hidden="true">
+                        <h1>Regjistrohu</h1>
+                        <a href="#" class="auth-toggle" onclick="toggleAuth('login'); return false;">Keni tashmë një llogari?</a>
+                    </div>
+                    <form id="mainRegisterForm">
+                        <div class="auth-form-group">
+                            <label for="reg-email">Email <span>*</span></label>
+                            <input type="email" id="reg-email" class="auth-input" required>
+                        </div>
+                        <div class="auth-form-group">
+                            <label for="reg-password">Fjalëkalimi <span>*</span></label>
+                            <input type="password" id="reg-password" class="auth-input" required>
+                        </div>
+                        <p class="auth-note">Të dhënat tuaja personale do të përdoren për të mbështetur përvojën tuaj në këtë faqe dhe për të menaxhuar qasjen në llogari.</p>
+                        <button type="submit" class="btn btn-primary btn-full auth-submit-btn">Regjistrohu</button>
+                    </form>
+                </div>
+                <div class="auth-container hidden" id="loggedInContainer">
+                    <div class="auth-header">
+                        <img src="images/brand/logo.png" alt="" class="auth-emblem" aria-hidden="true">
+                        <h1>Llogaria ime</h1>
+                    </div>
+                    <div class="account-welcome">
+                        <i class="fas fa-user-circle"></i>
+                        <h2 id="welcomeUser">Mirë se u ktheve!</h2>
+                        <p id="userEmailDisplay"></p>
+                        <div class="account-actions">
+                            <a href="shop.html" class="btn btn-primary">Fillo blerjen</a>
+                            <a href="wishlist.html" class="btn btn-secondary">Të preferuarat</a>
+                            <button onclick="handleLogout()" class="btn btn-outline">Dil</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo" aria-label="Miss Olympia - kryefaqja">
+                        <img src="images/brand/logo.png" alt="Miss Olympia" width="880" height="880" loading="lazy">
+                    </a>
+                    <p>Parfume 99.9% origjinale në Shkodër që nga 2015. Dërgesa në të gjitha qytetet.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Eksploro</h3>
+                    <ul>
+                        <li><a href="shop.html">Koleksioni</a></li>
+                        <li><a href="about.html">Rreth Nesh</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Klientët</h3>
+                    <ul>
+                        <li><a href="account.html">Llogaria ime</a></li>
+                        <li><a href="wishlist.html">Të preferuarat</a></li>
+                        <li><a href="cart.html">Shporta</a></li>
+                        <li><a href="checkout.html">Porosia</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Na vizitoni</h3>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-map-marker-alt"></i> Parruce, ngjitur me pasticerinë Oraldi, Shkodër</li>
+                        <li><i class="fas fa-location-arrow"></i> <a href="https://www.google.com/maps/search/?api=1&amp;query=Oraldi+Shkoder" target="_blank" rel="noopener">Hapni lokacionin në hartë</a></li>
+                        <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/missolympia.shkoder/" target="_blank" rel="noopener">@missolympia.shkoder</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Miss Olympia. Të gjitha të drejtat e rezervuara.</p>
+                <p>Shkodër, Shqipëri &middot; Që nga 2015</p>
+            </div>
+        </div>
+    </footer>
+
+    <nav class="mobile-bottom-nav" aria-label="Navigim i shpejtë">
+        <div class="mobile-nav-container">
+            <a href="index.html" class="mobile-nav-item">
+                <i class="fas fa-home"></i>
+                <span>Kryefaqja</span>
+            </a>
+            <a href="shop.html" class="mobile-nav-item">
+                <i class="fas fa-spray-can-sparkles"></i>
+                <span>Koleksioni</span>
+            </a>
+            <a href="wishlist.html" class="mobile-nav-item wishlist-btn">
+                <i class="fas fa-heart"></i>
+                <span>Të preferuarat</span>
+            </a>
+            <a href="cart.html" class="mobile-nav-item">
+                <i class="fas fa-shopping-bag"></i>
+                <span>Shporta</span>
+                <span class="cart-count">0</span>
+            </a>
+            <a href="account.html" class="mobile-nav-item account-btn active">
+                <i class="fas fa-user"></i>
+                <span>Llogaria</span>
+            </a>
+        </div>
+    </nav>
+
+    <script src="script.js"></script>
+    <script>
+        function toggleAuth(type) {
+            const login = document.getElementById('loginContainer');
+            const register = document.getElementById('registerContainer');
+            if (type === 'register') { login.classList.add('hidden'); register.classList.remove('hidden'); }
+            else { login.classList.remove('hidden'); register.classList.add('hidden'); }
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            const user = localStorage.getItem('missOlympiaUser');
+            const login = document.getElementById('loginContainer');
+            const register = document.getElementById('registerContainer');
+            const loggedIn = document.getElementById('loggedInContainer');
+            if (user) {
+                login.classList.add('hidden'); register.classList.add('hidden'); loggedIn.classList.remove('hidden');
+                document.getElementById('userEmailDisplay').textContent = user;
+            }
+            const params = new URLSearchParams(window.location.search);
+            if (params.get('action') === 'register' && !user) toggleAuth('register');
+            document.getElementById('mainLoginForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                localStorage.setItem('missOlympiaUser', document.getElementById('username').value);
+                location.reload();
+            });
+            document.getElementById('mainRegisterForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                localStorage.setItem('missOlympiaUser', document.getElementById('reg-email').value);
+                location.reload();
+            });
+        });
+        function handleLogout() { localStorage.removeItem('missOlympiaUser'); location.reload(); }
+    </script>
+</body>
+</html>

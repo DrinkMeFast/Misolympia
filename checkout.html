@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Miss Olympia Shkodër - parfume 99.9% origjinale që nga 2015. Parruce, pranë pasticerisë Oraldi. Dërgesa në të gjitha qytetet.">
+    <meta name="theme-color" content="#0d0c09">
+    <title>Porosia | Miss Olympia</title>
+    <link rel="icon" type="image/png" href="images/brand/favicon.png">
+    <link rel="apple-touch-icon" href="images/brand/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+    <div class="announcement-bar">
+        <div class="container announcement-inner">
+            <span>99.9% origjinale</span>
+            <span class="announcement-sep" aria-hidden="true">&#9670;</span>
+            <span>Dërgesa në të gjitha qytetet</span>
+            <span class="announcement-sep" aria-hidden="true">&#9670;</span>
+            <span>Parruce, Shkodër</span>
+        </div>
+    </div>
+
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo" aria-label="Miss Olympia - kryefaqja">
+                <img src="images/brand/logo.png" alt="" class="logo-emblem" width="880" height="880">
+                <span class="logo-wordmark">MISS OLYMPIA</span>
+            </a>
+            <nav class="nav" id="nav" aria-label="Menuja kryesore">
+                <ul class="nav-list"><li><a href="index.html" class="nav-link">Kryefaqja</a></li><li><a href="shop.html" class="nav-link">Koleksioni</a></li><li><a href="about.html" class="nav-link">Rreth Nesh</a></li><li><a href="contact.html" class="nav-link">Kontakt</a></li></ul>
+            </nav>
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Kërko parfum..." id="searchInput" aria-label="Kërko produkte">
+                    <button class="search-btn" aria-label="Kërko"><i class="fas fa-search"></i></button>
+                </div>
+                <a href="wishlist.html" class="header-action-btn wishlist-btn" title="Të preferuarat">
+                    <i class="far fa-heart"></i>
+                    <span class="wishlist-count" id="wishlistCount">0</span>
+                </a>
+                <a href="cart.html" class="cart-icon" title="Shporta">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+                <div class="account-wrapper">
+                    <a href="account.html" class="header-action-btn account-btn" id="accountBtn" title="Llogaria ime">
+                        <i class="far fa-user"></i>
+                    </a>
+                    <div class="account-dropdown">
+                        <a href="account.html">Hyr</a>
+                        <a href="account.html?action=register">Regjistrohu</a>
+                        <div class="divider"></div>
+                        <a href="wishlist.html">Të preferuarat</a>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Hap menynë" aria-expanded="false" aria-controls="nav">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <img src="images/brand/logo.png" alt="" class="page-emblem" aria-hidden="true">
+                <h1>Porosia</h1>
+                <p>Plotësoni të dhënat për të përfunduar porosinë</p>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <form class="checkout-grid" id="checkoutForm">
+                    <div class="checkout-form">
+                        <div class="form-section">
+                            <h3><i class="fas fa-user"></i> Të dhënat e kontaktit</h3>
+                            <div class="form-group">
+                                <label for="fullName">Emri i plotë *</label>
+                                <input type="text" id="fullName" name="fullName" required placeholder="Emri dhe mbiemri">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" placeholder="emri@shembull.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Telefon *</label>
+                                    <input type="tel" id="phone" name="phone" required placeholder="+355 XX XXX XXXX">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-section">
+                            <h3><i class="fas fa-map-marker-alt"></i> Adresa e dërgesës</h3>
+                            <div class="form-group">
+                                <label for="address">Adresa *</label>
+                                <input type="text" id="address" name="address" required placeholder="Rruga dhe numri">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">Qyteti *</label>
+                                    <input type="text" id="city" name="city" required placeholder="Qyteti">
+                                </div>
+                                <div class="form-group">
+                                    <label for="postalCode">Kodi postar</label>
+                                    <input type="text" id="postalCode" name="postalCode" placeholder="1001">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-section">
+                            <h3><i class="fas fa-wallet"></i> Mënyra e pagesës</h3>
+                            <div class="payment-methods">
+                                <label class="payment-method">
+                                    <input type="radio" name="payment" value="cash" checked>
+                                    <div>
+                                        <strong>Pagesë në dorëzim</strong>
+                                        <p style="font-size: 13px; color: var(--text-light); margin-top: 5px;">Paguani kur e merrni porosinë</p>
+                                    </div>
+                                </label>
+                                <label class="payment-method">
+                                    <input type="radio" name="payment" value="pickup">
+                                    <div>
+                                        <strong>Merrni në dyqan</strong>
+                                        <p style="font-size: 13px; color: var(--text-light); margin-top: 5px;">Parruce, Shkodër</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-section">
+                            <h3><i class="fas fa-comment"></i> Shënime (opsionale)</h3>
+                            <div class="form-group">
+                                <textarea id="notes" name="notes" rows="3" placeholder="Çdo shënim shtesë për porosinë" aria-label="Shënime për porosinë"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full btn-lg">
+                            <i class="fas fa-check"></i> Përfundo porosinë
+                        </button>
+                    </div>
+                    <div class="cart-summary">
+                        <h3>Përmbledhja e porosisë</h3>
+                        <div id="checkoutSummary"></div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo" aria-label="Miss Olympia - kryefaqja">
+                        <img src="images/brand/logo.png" alt="Miss Olympia" width="880" height="880" loading="lazy">
+                    </a>
+                    <p>Parfume 99.9% origjinale në Shkodër që nga 2015. Dërgesa në të gjitha qytetet.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Eksploro</h3>
+                    <ul>
+                        <li><a href="shop.html">Koleksioni</a></li>
+                        <li><a href="about.html">Rreth Nesh</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Klientët</h3>
+                    <ul>
+                        <li><a href="account.html">Llogaria ime</a></li>
+                        <li><a href="wishlist.html">Të preferuarat</a></li>
+                        <li><a href="cart.html">Shporta</a></li>
+                        <li><a href="checkout.html">Porosia</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Na vizitoni</h3>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-map-marker-alt"></i> Parruce, ngjitur me pasticerinë Oraldi, Shkodër</li>
+                        <li><i class="fas fa-location-arrow"></i> <a href="https://www.google.com/maps/search/?api=1&amp;query=Oraldi+Shkoder" target="_blank" rel="noopener">Hapni lokacionin në hartë</a></li>
+                        <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/missolympia.shkoder/" target="_blank" rel="noopener">@missolympia.shkoder</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Miss Olympia. Të gjitha të drejtat e rezervuara.</p>
+                <p>Shkodër, Shqipëri &middot; Që nga 2015</p>
+            </div>
+        </div>
+    </footer>
+
+    <nav class="mobile-bottom-nav" aria-label="Navigim i shpejtë">
+        <div class="mobile-nav-container">
+            <a href="index.html" class="mobile-nav-item">
+                <i class="fas fa-home"></i>
+                <span>Kryefaqja</span>
+            </a>
+            <a href="shop.html" class="mobile-nav-item">
+                <i class="fas fa-spray-can-sparkles"></i>
+                <span>Koleksioni</span>
+            </a>
+            <a href="wishlist.html" class="mobile-nav-item wishlist-btn">
+                <i class="fas fa-heart"></i>
+                <span>Të preferuarat</span>
+            </a>
+            <a href="cart.html" class="mobile-nav-item">
+                <i class="fas fa-shopping-bag"></i>
+                <span>Shporta</span>
+                <span class="cart-count">0</span>
+            </a>
+            <a href="account.html" class="mobile-nav-item account-btn">
+                <i class="fas fa-user"></i>
+                <span>Llogaria</span>
+            </a>
+        </div>
+    </nav>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
